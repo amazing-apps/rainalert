@@ -1,0 +1,234 @@
+/* ============================================================
+   Rain Alert — shared design tokens
+   Підключай у кожному html перед локальним <style>:
+   <link rel="stylesheet" href="shared.css">
+   ============================================================ */
+
+/* ─── Fonts (також треба підключити у <head> кожної сторінки) ─── */
+/* <link rel="preconnect" href="https://fonts.googleapis.com">     */
+/* <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> */
+/* <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Sans:wght@400;500;600&display=swap" rel="stylesheet"> */
+
+/* ─── Tokens ─── */
+:root {
+  --rain:       #2563c8;
+  --rain-light: #4a8fef;
+  --rain-pale:  #ddeaff;
+  --sky:        #f0f6ff;
+  --dark:       #0d1f3c;
+  --text:       #1a2f52;
+  --muted:      #5a7499;
+  --white:      #ffffff;
+  --bg:         #f7f9ff;
+  --radius:     18px;
+  --shadow-sm:  0 2px 12px rgba(37,99,200,.10);
+  --shadow-md:  0 8px 40px rgba(37,99,200,.15);
+  --shadow-lg:  0 24px 80px rgba(37,99,200,.20);
+
+  /* зворотна сумісність зі старими класами */
+  --accent-1: var(--rain-light);
+  --accent-2: #4aa47b;
+  --accent-3: var(--rain);
+  --shadow:   var(--shadow-sm);
+}
+
+/* ─── Reset & base ─── */
+* { box-sizing: border-box; }
+html, body { height: 100%; }
+body {
+  margin: 0;
+  font-family: 'DM Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+  color: var(--text);
+  background: var(--white);
+  line-height: 1.6;
+  overflow-x: hidden;
+}
+
+/* ─── Layout ─── */
+.container { width: min(1160px, 92vw); margin: 0 auto; }
+
+/* ─── Header ─── */
+header {
+  position: sticky; top: 0; z-index: 100;
+  background: rgba(255,255,255,.88);
+  backdrop-filter: saturate(180%) blur(12px);
+  border-bottom: 1px solid rgba(37,99,200,.08);
+}
+.nav {
+  display: flex; align-items: center; justify-content: space-between;
+  gap: 20px; padding: 14px 0;
+}
+
+/* brand */
+.brand {
+  display: inline-flex; align-items: center; gap: 10px;
+  text-decoration: none; color: var(--dark);
+}
+.brand img { width: 36px; height: 36px; border-radius: 10px; box-shadow: var(--shadow-sm); }
+.brand span,
+.brand-name {
+  font-family: 'DM Serif Display', Georgia, serif;
+  font-size: 22px; letter-spacing: -.3px;
+  font-weight: normal;
+}
+
+/* nav links */
+.center-links,
+.nav-links {
+  display: inline-flex; gap: 22px;
+  justify-self: center;
+}
+.center-links a,
+.nav-links a {
+  text-decoration: none; color: var(--muted);
+  font-weight: 500; font-size: 15px;
+  transition: color .2s;
+}
+.center-links a:hover,
+.nav-links a:hover { color: var(--rain); }
+
+/* right side */
+.right-cta,
+.nav-right {
+  display: inline-flex; align-items: center; gap: 12px;
+  justify-self: end;
+}
+
+/* App Store badge */
+.app-badge,
+.badge-wrap {
+  display: inline-flex; align-items: center; text-decoration: none;
+}
+.app-badge svg,
+.badge-wrap svg { height: 38px; width: auto; transition: opacity .2s; }
+.app-badge:hover svg,
+.badge-wrap:hover svg { opacity: .8; }
+
+/* language switcher */
+.lang-switch,
+.lang-btn {
+  border: 1.5px solid rgba(37,99,200,.25);
+  border-radius: 999px;
+  padding: 5px 12px;
+  background: transparent;
+  font-size: 14px; font-weight: 600;
+  color: var(--rain);
+  cursor: pointer;
+  font-family: inherit;
+  transition: background .2s;
+}
+.lang-switch:hover,
+.lang-btn:hover { background: var(--rain-pale); }
+
+/* ─── Page content area (legal, about, privacy, terms) ─── */
+section.page {
+  padding: 60px 0 80px;
+  max-width: 720px;
+}
+
+/* page title */
+section.page h1,
+.page-title {
+  font-family: 'DM Serif Display', Georgia, serif;
+  font-size: clamp(30px, 5vw, 52px);
+  color: var(--dark);
+  line-height: 1.1;
+  margin: 0 0 8px;
+  letter-spacing: -.4px;
+}
+
+/* page subtitle / lead */
+section.page > p:first-of-type,
+.page-lead {
+  font-size: 17px;
+  color: var(--muted);
+  margin: 0 0 40px;
+  line-height: 1.7;
+}
+
+/* body copy */
+section.page h2 {
+  font-family: 'DM Serif Display', Georgia, serif;
+  font-size: 22px; color: var(--dark);
+  margin: 36px 0 10px;
+}
+section.page h3 {
+  font-size: 16px; font-weight: 600;
+  color: var(--text); margin: 24px 0 8px;
+}
+section.page p { color: var(--muted); margin: 0 0 14px; line-height: 1.75; }
+section.page ul, section.page ol {
+  color: var(--muted); padding-left: 22px; margin: 0 0 14px;
+}
+section.page li { margin-bottom: 6px; line-height: 1.7; }
+section.page a { color: var(--rain); text-decoration: underline; text-decoration-color: var(--rain-pale); }
+section.page a:hover { text-decoration-color: var(--rain); }
+section.page strong { color: var(--text); font-weight: 600; }
+
+/* decorative accent bar under page title */
+section.page::before {
+  content: '';
+  display: block;
+  width: 48px; height: 3px;
+  background: var(--rain);
+  border-radius: 2px;
+  margin-bottom: 28px;
+}
+
+/* ─── Hero (reused on inner pages, simplified) ─── */
+.hero { padding: 56px 0 20px; }
+.hero h1 {
+  font-family: 'DM Serif Display', Georgia, serif;
+  font-size: clamp(28px, 4vw, 52px);
+  color: var(--dark); margin: 0 0 14px; line-height: 1.15;
+}
+.hero p { font-size: clamp(16px, 2.2vw, 18px); color: var(--muted); margin: 0 0 20px; }
+
+/* ─── Cards (if used on sub-pages) ─── */
+.card {
+  background: var(--white);
+  border: 1.5px solid #e8f0fb;
+  border-radius: var(--radius);
+  padding: 24px;
+  box-shadow: var(--shadow-sm);
+  transition: box-shadow .2s, transform .2s;
+}
+.card:hover { box-shadow: var(--shadow-md); transform: translateY(-3px); }
+.card h3 { font-size: 18px; color: var(--dark); margin: 10px 0 6px; }
+.card p  { margin: 0; color: var(--muted); font-size: 14px; }
+
+/* ─── Footer ─── */
+footer {
+  border-top: 1px solid #e8f0fb;
+  padding: 40px 0;
+  background: #f7f9ff;
+  margin-top: 0;
+}
+.foot {
+  display: grid;
+  grid-template-columns: 1.5fr 1fr 1fr;
+  gap: 30px; align-items: start;
+}
+.foot-col { display: grid; gap: 10px; }
+.foot a, .foot-col a {
+  color: var(--muted); text-decoration: none;
+  font-size: 14px; transition: color .2s;
+  display: block; margin-bottom: 2px;
+}
+.foot a:hover, .foot-col a:hover { color: var(--rain); }
+.foot-col-title {
+  font-size: 12px; font-weight: 700;
+  text-transform: uppercase; letter-spacing: .6px;
+  color: var(--muted); margin-bottom: 4px;
+}
+
+/* ─── Responsive ─── */
+@media (max-width: 900px) {
+  .nav { flex-wrap: wrap; }
+  .nav-links, .center-links { display: none; }
+  .foot { grid-template-columns: 1fr; }
+}
+@media (max-width: 920px) {
+  /* backward compat */
+  .foot { grid-template-columns: 1fr; }
+}
