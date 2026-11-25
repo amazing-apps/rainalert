@@ -1,11 +1,10 @@
-// Language switch: Ukrainian / English. Remembers the choice; the first
-// visit follows the browser language. Without JavaScript the page is Ukrainian.
+// Language switch: English / Ukrainian. English by default; the visitor's
+// choice is remembered. Without JavaScript the page is English.
 (function () {
   var root = document.documentElement;
   var saved = null;
   try { saved = localStorage.getItem("tokani-lang"); } catch (e) {}
-  var browser = (navigator.language || "uk").toLowerCase();
-  var lang = saved || (browser.indexOf("uk") === 0 || browser.indexOf("ru") === 0 ? "uk" : "en");
+  var lang = saved === "uk" ? "uk" : "en";
   var params = new URLSearchParams(location.search);
   if (params.get("lang") === "en" || params.get("lang") === "uk") lang = params.get("lang");
   root.setAttribute("lang", lang);
