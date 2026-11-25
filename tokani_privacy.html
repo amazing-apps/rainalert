@@ -1,0 +1,158 @@
+<!doctype html>
+<html lang="uk">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Tokani — Політика конфіденційності / Privacy Policy</title>
+  <meta name="description" content="Privacy Policy of the Tokani app.">
+  <meta name="theme-color" content="#140c33">
+  <link rel="icon" href="tokani_assets/favicon.png">
+  <link rel="apple-touch-icon" href="tokani_assets/apple-touch-icon.png">
+  <link rel="stylesheet" href="tokani_assets/style.css">
+  <script src="tokani_assets/site.js" defer></script>
+</head>
+<body>
+  <div class="wrap">
+    <header class="top">
+      <a class="brand" href="tokani.html"><img src="tokani_assets/icon-512.png" alt="">Tokani</a>
+      <div class="lang-switch" role="group" aria-label="Language">
+        <button type="button" data-set="uk">UA</button>
+        <button type="button" data-set="en">EN</button>
+      </div>
+    </header>
+
+    <!-- ═════════════════════════ УКРАЇНСЬКА ═════════════════════════ -->
+    <article class="legal" data-lang="uk">
+      <h1>Політика конфіденційності</h1>
+      <p class="updated">Набирає чинності: EFFECTIVE_DATE</p>
+
+      <div class="box">
+        <p><strong>Коротко:</strong> ми збираємо лише те, що потрібно для уроків, — мову, прогрес і текст діалогу з репетитором. Ми не показуємо рекламу, не відстежуємо вас в інших застосунках і не продаємо дані. Голос у хмарному режимі обробляється лише для розпізнавання й не зберігається нами. Акаунт і всі дані можна видалити в застосунку.</p>
+      </div>
+
+      <h2>1. Хто ми</h2>
+      <p>Застосунок Tokani («застосунок», «ми») розробляє DEVELOPER_NAME (DEVELOPER_ADDRESS). З будь-яких питань щодо даних пишіть на <a href="mailto:PRIVACY_EMAIL">PRIVACY_EMAIL</a>.</p>
+
+      <h2>2. Які дані ми обробляємо</h2>
+      <table>
+        <tr><th>Дані</th><th>Навіщо</th></tr>
+        <tr><td>Ідентифікатор акаунта (анонімний ідентифікатор Firebase). Якщо ви входите через Apple — ідентифікатор Apple та email (може бути прихованою адресою Apple).</td><td>Щоб зберігати ваш прогрес і баланс хвилин та відновлювати їх на іншому пристрої.</td></tr>
+        <tr><td>Налаштування навчання: рідна мова, мова навчання, рівень, ім'я, яке ви назвали репетитору (необов'язково).</td><td>Щоб підбирати уроки й звертатися до вас.</td></tr>
+        <tr><td>Прогрес: статуси тем, час навчання, кількість уроків, текст діалогу з репетитором (до 200 останніх повідомлень на тему), короткі підсумки уроків.</td><td>Щоб продовжувати урок з того місця, де ви зупинилися, і показувати історію.</td></tr>
+        <tr><td>Голос (аудіо з мікрофона) — лише під час уроку, коли ви утримуєте кнопку.</td><td>Щоб розпізнати сказане. Див. розділ 3.</td></tr>
+        <tr><td>Покупки: ідентифікатори транзакцій App Store, продукт, дати покупки та закінчення підписки.</td><td>Щоб перевірити покупку в Apple і нарахувати хвилини. Платіжні дані (картка тощо) обробляє Apple — ми їх не бачимо.</td></tr>
+        <tr><td>Технічні дані: звіти про збої (модель пристрою, версія iOS і застосунку, технічний журнал збою), токени перевірки справжності застосунку (Firebase App Check).</td><td>Щоб виправляти помилки й захищати сервіс від зловживань.</td></tr>
+      </table>
+      <p>Ми не збираємо геолокацію, контакти, фото, рекламні ідентифікатори і не використовуємо аналітику для реклами.</p>
+
+      <h2>3. Голос і ШІ-репетитор</h2>
+      <ul>
+        <li><strong>Режим на пристрої.</strong> Якщо репетитор працює на пристрої, голос і текст уроку не залишають ваш iPhone. Моделі розпізнавання й мовлення завантажуються один раз (з Hugging Face) і працюють локально.</li>
+        <li><strong>Хмарний режим.</strong> Запис вашої фрази передається на наш сервер (Google Cloud Functions, ЄС) і далі постачальнику розпізнавання мовлення; текст діалогу — постачальнику мовної моделі для відповіді; текст відповіді — постачальнику синтезу мовлення. Ми не зберігаємо аудіозаписи; зберігається лише розпізнаний текст діалогу (див. розділ 2).</li>
+        <li>Постачальники ШІ обробляють дані лише для надання відповіді й відповідно до своїх умов для API: OpenAI (США), Groq (США), Google Cloud Text-to-Speech.</li>
+      </ul>
+
+      <h2>4. Хто ще отримує дані (обробники)</h2>
+      <ul>
+        <li><strong>Google Firebase</strong> (Authentication, Cloud Firestore, Cloud Functions, App Check, Crashlytics) — зберігання акаунта й прогресу, серверна логіка, звіти про збої.</li>
+        <li><strong>OpenAI</strong> і <strong>Groq</strong> — розпізнавання мовлення та відповіді репетитора в хмарному режимі.</li>
+        <li><strong>Google Cloud Text-to-Speech</strong> і <strong>OpenAI</strong> — озвучення відповідей у хмарному режимі.</li>
+        <li><strong>Apple</strong> — Вхід через Apple, оплата й підписки App Store.</li>
+      </ul>
+      <p>Ми не продаємо й не передаємо ваші дані для реклами. Дані можуть оброблятися за межами вашої країни (зокрема в США); у таких випадках постачальники застосовують стандартні договірні положення або інші законні механізми передачі.</p>
+
+      <h2>5. Підстави обробки</h2>
+      <p>Виконання договору (надання уроків і нарахування хвилин), наші законні інтереси (безпека, виправлення помилок) і ваша згода (доступ до мікрофона, сповіщення — ви можете відкликати її в Параметрах iOS).</p>
+
+      <h2>6. Скільки зберігаємо</h2>
+      <p>Поки у вас є акаунт. Діалог кожної теми обмежено 200 останніми повідомленнями; старіші видаляються автоматично. Ви можете очистити історію теми чи цілого рівня в застосунку. Після видалення акаунта дані видаляються з наших баз протягом 30 днів (резервні копії постачальників — згідно з їхніми строками). Звіти про збої зберігаються до 90 днів.</p>
+
+      <h2>7. Ваші права</h2>
+      <p>Ви можете отримати копію своїх даних, виправити, обмежити обробку, заперечити проти неї, видалити дані або перенести їх. Видалити акаунт і всі дані можна в застосунку: <em>Налаштування → Видалити акаунт</em>, або листом на <a href="mailto:PRIVACY_EMAIL">PRIVACY_EMAIL</a>. Ви також можете подати скаргу до наглядового органу з захисту даних у вашій країні.</p>
+
+      <h2>8. Діти</h2>
+      <p>Застосунок не призначений для дітей до 13 років (у ЄС — до віку, встановленого вашою країною). Якщо ви вважаєте, що дитина передала нам дані, напишіть нам — ми їх видалимо.</p>
+
+      <h2>9. Безпека</h2>
+      <p>Дані передаються зашифрованими каналами (HTTPS/TLS). Доступ до баз даних обмежено правилами безпеки: кожен користувач бачить лише свої дані, а баланс і покупки змінює лише сервер.</p>
+
+      <h2>10. Зміни</h2>
+      <p>Ми можемо оновлювати цю політику. Про суттєві зміни повідомимо в застосунку або на цій сторінці; дата вгорі показує останню редакцію.</p>
+
+      <h2>11. Контакти</h2>
+      <p>DEVELOPER_NAME · <a href="mailto:PRIVACY_EMAIL">PRIVACY_EMAIL</a></p>
+    </article>
+
+    <!-- ═════════════════════════ ENGLISH ═════════════════════════ -->
+    <article class="legal" data-lang="en">
+      <h1>Privacy Policy</h1>
+      <p class="updated">Effective: EFFECTIVE_DATE</p>
+
+      <div class="box">
+        <p><strong>In short:</strong> we only collect what lessons need — your languages, progress and the text of your dialogue with the tutor. We show no ads, don't track you across other apps and never sell data. In cloud mode your voice is processed only to recognise speech and is not stored by us. You can delete your account and all data in the app.</p>
+      </div>
+
+      <h2>1. Who we are</h2>
+      <p>The Tokani app (“the app”, “we”) is developed by DEVELOPER_NAME (DEVELOPER_ADDRESS). For any privacy question, email <a href="mailto:PRIVACY_EMAIL">PRIVACY_EMAIL</a>.</p>
+
+      <h2>2. Data we process</h2>
+      <table>
+        <tr><th>Data</th><th>Why</th></tr>
+        <tr><td>Account identifier (anonymous Firebase ID). If you use Sign in with Apple — your Apple user identifier and email (which may be an Apple private relay address).</td><td>To keep your progress and minute balance and restore them on another device.</td></tr>
+        <tr><td>Learning settings: native language, target language, level, the name you tell the tutor (optional).</td><td>To tailor lessons and address you.</td></tr>
+        <tr><td>Progress: topic statuses, study time, lesson count, the text of your dialogue with the tutor (up to the latest 200 messages per topic), short lesson summaries.</td><td>To continue where you left off and show your history.</td></tr>
+        <tr><td>Voice (microphone audio) — only during a lesson, while you hold the talk button.</td><td>To recognise what you say. See section 3.</td></tr>
+        <tr><td>Purchases: App Store transaction identifiers, product, purchase and expiry dates.</td><td>To verify the purchase with Apple and credit minutes. Payment details (card etc.) are handled by Apple — we never see them.</td></tr>
+        <tr><td>Technical data: crash reports (device model, iOS and app version, crash trace) and app-integrity tokens (Firebase App Check).</td><td>To fix bugs and protect the service from abuse.</td></tr>
+      </table>
+      <p>We do not collect location, contacts, photos or advertising identifiers, and we do not use analytics for advertising.</p>
+
+      <h2>3. Voice and the AI tutor</h2>
+      <ul>
+        <li><strong>On-device mode.</strong> When the tutor runs on your device, your voice and lesson text never leave your iPhone. Speech models are downloaded once (from Hugging Face) and run locally.</li>
+        <li><strong>Cloud mode.</strong> The recording of your phrase is sent to our server (Google Cloud Functions, EU) and on to a speech-recognition provider; the dialogue text goes to a language-model provider to generate the reply; the reply text goes to a speech-synthesis provider. We do not store audio recordings; only the recognised dialogue text is kept (see section 2).</li>
+        <li>AI providers process the data only to produce the response, under their API terms: OpenAI (USA), Groq (USA), Google Cloud Text-to-Speech.</li>
+      </ul>
+
+      <h2>4. Who else receives data (processors)</h2>
+      <ul>
+        <li><strong>Google Firebase</strong> (Authentication, Cloud Firestore, Cloud Functions, App Check, Crashlytics) — account and progress storage, server logic, crash reports.</li>
+        <li><strong>OpenAI</strong> and <strong>Groq</strong> — speech recognition and tutor replies in cloud mode.</li>
+        <li><strong>Google Cloud Text-to-Speech</strong> and <strong>OpenAI</strong> — voicing replies in cloud mode.</li>
+        <li><strong>Apple</strong> — Sign in with Apple, App Store payments and subscriptions.</li>
+      </ul>
+      <p>We do not sell your data or share it for advertising. Data may be processed outside your country (including the USA); in such cases providers rely on Standard Contractual Clauses or other lawful transfer mechanisms.</p>
+
+      <h2>5. Legal bases</h2>
+      <p>Performance of a contract (providing lessons and crediting minutes), our legitimate interests (security, fixing bugs) and your consent (microphone access, notifications — you can withdraw it in iOS Settings).</p>
+
+      <h2>6. Retention</h2>
+      <p>For as long as you have an account. Each topic's dialogue is limited to the latest 200 messages; older ones are deleted automatically. You can clear the history of a topic or a whole level in the app. After you delete your account, your data is removed from our databases within 30 days (provider backups follow their own schedules). Crash reports are kept for up to 90 days.</p>
+
+      <h2>7. Your rights</h2>
+      <p>You can access, correct, restrict, object to, delete or port your data. Delete your account and all data in the app under <em>Settings → Delete account</em>, or email <a href="mailto:PRIVACY_EMAIL">PRIVACY_EMAIL</a>. You may also lodge a complaint with your local data-protection authority.</p>
+
+      <h2>8. Children</h2>
+      <p>The app is not intended for children under 13 (in the EU, under the age set by your country). If you believe a child has given us data, contact us and we will delete it.</p>
+
+      <h2>9. Security</h2>
+      <p>Data is sent over encrypted connections (HTTPS/TLS). Database access is restricted by security rules: each user can see only their own data, and only the server can change balances and purchases.</p>
+
+      <h2>10. Changes</h2>
+      <p>We may update this policy. We will announce material changes in the app or on this page; the date above shows the latest version.</p>
+
+      <h2>11. Contact</h2>
+      <p>DEVELOPER_NAME · <a href="mailto:PRIVACY_EMAIL">PRIVACY_EMAIL</a></p>
+    </article>
+
+    <footer>
+      <nav>
+        <a href="tokani.html"><span data-lang="uk">Головна</span><span data-lang="en">Home</span></a>
+        <a href="tokani.html#support"><span data-lang="uk">Підтримка</span><span data-lang="en">Support</span></a>
+        <a href="https://www.apple.com/legal/internet-services/itunes/dev/stdeula/"><span data-lang="uk">Умови використання (EULA)</span><span data-lang="en">Terms of Use (EULA)</span></a>
+      </nav>
+      © <span id="year">2026</span> DEVELOPER_NAME
+    </footer>
+  </div>
+</body>
+</html>
